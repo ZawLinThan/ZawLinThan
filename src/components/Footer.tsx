@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <footer className="site-footer wrap">
       <Link className="wordmark" to="/">
-        ZLT<span>.</span>
+        ZLT
       </Link>
       <span>© {new Date().getFullYear()} Zaw Lin Than</span>
       <a href="https://github.com/ZawLinThan" target="_blank" rel="noreferrer">

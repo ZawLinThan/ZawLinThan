@@ -41,12 +41,12 @@ const Hero = () => {
             <dd>Georgia Institute of Technology</dd>
           </div>
           <div>
-            <dt> Major </dt>
-            <dd> Computer Science</dd>
+            <dt> Major</dt>
+            <dd> Computer Science - 4.00 GPA</dd>
           </div>
           <div>
             <dt> Concentration</dt>
-            <dd> Artificial Intelligence & Information Internetwork</dd>
+            <dd> AI & Information Internetwork</dd>
           </div>
           <div>
             <dt> Student Status</dt>
