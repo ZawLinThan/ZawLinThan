@@ -23,9 +23,9 @@ const ProjectGrid = ({
       const heights = cards.map((card) => card.getBoundingClientRect().height);
       const nextRow = [1, 1];
 
-      // Give each column its own running position without reordering the links.
+      // Fill the shorter column while keeping the links in source order.
       cards.forEach((card, index) => {
-        const column = index % 2;
+        const column = nextRow[1] < nextRow[0] ? 1 : 0;
         const height = Math.ceil(heights[index]);
         card.style.setProperty("--project-column", String(column + 1));
         card.style.setProperty("--project-row", String(nextRow[column]));
