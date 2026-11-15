@@ -11,7 +11,7 @@ const Hero = () => (
           <span aria-hidden="true">01 /</span> SOFTWARE ENGINEERING
         </p>
         <h1 id="hero-title">
-          Zaw Lin Than<span className="accent">.</span>
+          Zaw Lin Than<span className="accent"></span>
         </h1>
         <p className="hero-lead">
           I build AI tools and full-stack applications.
