@@ -1000,11 +1000,15 @@ h1.section-label {
   height: 44px;
   display: grid;
   place-items: center;
-  background: white;
-  color: var(--ink);
+  background: var(--accent-surface);
+  color: var(--accent);
+  border: 1px solid var(--border);
   border-radius: 6px;
   font-family: var(--mono);
   font-size: 1.1rem;
+}
+.skill-symbol-logo {
+  background: var(--logo-backplate);
 }
 .skill-symbol img {
   width: 32px;

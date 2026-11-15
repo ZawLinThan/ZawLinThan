@@ -2,7 +2,10 @@ import type { Skill } from "../data/skills";
 
 const SkillTile = ({ skill }: { skill: Skill }) => (
   <li className="skill-tile">
-    <span className="skill-symbol" aria-hidden="true">
+    <span
+      className={skill.icon ? "skill-symbol skill-symbol-logo" : "skill-symbol"}
+      aria-hidden="true"
+    >
       {skill.icon ? (
         <img
           src={`/skill-icons/${skill.icon}.svg`}

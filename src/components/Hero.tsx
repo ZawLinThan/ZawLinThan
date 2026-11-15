@@ -17,8 +17,9 @@ const Hero = () => (
           I build AI tools and full-stack applications.
         </p>
         <p className="hero-description">
-          I study computer science at <Link to="/about">Georgia Tech</Link>,
-          where I focus on AI and Information Internetworks.
+          CS @ <Link to="/about">Georgia Tech</Link>.
+          I’m interested in how intelligent
+        systems learn and how connected software works in practice.
         </p>
         <HomeActions />
       </div>
