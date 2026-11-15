@@ -13,6 +13,8 @@ import bondNotificationPage from '../assets/bond/notifications_page.png'
 import bondProfilePage from '../assets/bond/profile_page.png'
 import bondMobileView from "../assets/bond/mobile_view.png"
 
+import landingPage from "../assets/xplain-it/landing_page.png"
+
 import type { ProjectStatus } from "../components/StatusBadge";
 
 export interface Project {
@@ -120,7 +122,9 @@ export const projects: Project[] = [
       "SpeechBrain",
       "PyTorch",
     ],
-    screenshots: [],
+    screenshots: [
+      {src: landingPage, alt: "Xplain-it landing page", caption: "Landing Page"}
+    ],
     video: {
       embedUrl:
         "https://drive.google.com/file/d/15ucpexZ5-55kvPLjl3iuzoVugleMOF8_/preview",

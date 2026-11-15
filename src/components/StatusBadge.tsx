@@ -5,7 +5,7 @@ const StatusBadge = ({ status }: { status: ProjectStatus }) => {
     <span
       className={`status-badge ${status === "In progress" ? "in-progress" : "done"}`}
     >
-      <span aria-hidden="true">●</span> {status}
+      {status}
     </span>
   );
 };

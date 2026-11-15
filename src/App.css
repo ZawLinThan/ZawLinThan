@@ -473,19 +473,22 @@ h1.section-label {
   color: var(--muted);
 }
 .project-preview {
+  --workflow-accent: var(--accent);
   border-bottom: 1px solid var(--border);
   background-color: var(--surface-soft);
 }
 .workflow {
-  --workflow-accent: var(--accent);
   padding: 16px 20px 20px;
+}
+.workflow,
+.project-preview-combined {
   background-image: radial-gradient(
     var(--control-border) 0.65px,
     transparent 0.8px
   );
   background-size: 16px 16px;
 }
-.ai-research-agent {
+.project-preview.ai-research-agent {
   --workflow-accent: var(--cyan);
   background-color: var(--violet-surface);
 }
@@ -497,11 +500,12 @@ h1.section-label {
   color: var(--workflow-accent);
 }
 .workflow ol {
+  --workflow-gap: 16px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   padding: 0;
   margin: 0;
-  gap: 16px;
+  gap: var(--workflow-gap);
   list-style: none;
 }
 .workflow li {
@@ -528,14 +532,28 @@ h1.section-label {
   height: 17px;
   flex: 0 0 auto;
 }
-.workflow li:not(:last-child)::after {
+.workflow li[data-next]::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 100%;
-  width: 17px;
-  height: 1px;
   background: var(--workflow-accent);
+}
+.workflow li[data-next="right"]::after,
+.workflow li[data-next="left"]::after {
+  top: 50%;
+  width: calc(var(--workflow-gap) + 2px);
+  height: 1px;
+}
+.workflow li[data-next="right"]::after {
+  left: 100%;
+}
+.workflow li[data-next="left"]::after {
+  right: 100%;
+}
+.workflow li[data-next="down"]::after {
+  top: 100%;
+  left: 50%;
+  width: 1px;
+  height: calc(var(--workflow-gap) + 2px);
 }
 .project-screenshot {
   aspect-ratio: 2.7;
@@ -546,6 +564,37 @@ h1.section-label {
   height: 100%;
   object-fit: cover;
   object-position: top;
+}
+.project-preview-combined {
+  display: grid;
+  gap: 16px;
+  padding: clamp(12px, 2vw, 20px);
+}
+.project-preview-combined .project-screenshot {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.project-preview-combined .workflow {
+  padding: 0;
+  background: none;
+}
+.project-preview-combined .preview-caption {
+  margin-bottom: 8px;
+  padding: 0;
+  background: none;
+  color: var(--muted);
+}
+.project-preview-combined .workflow li {
+  gap: 4px;
+  padding-block: 8px;
+  border-color: var(--border);
+  overflow-wrap: anywhere;
+}
+.project-preview-combined .workflow-step svg {
+  display: none;
+}
+.project-preview-combined .workflow li[data-next]::after {
+  background: var(--control-border);
 }
 .project-copy {
   display: flex;
@@ -910,10 +959,7 @@ h1.section-label {
     overflow-wrap: anywhere;
   }
   .workflow ol {
-    gap: 10px;
-  }
-  .workflow li:not(:last-child)::after {
-    width: 11px;
+    --workflow-gap: 10px;
   }
 }
 
