@@ -3,7 +3,9 @@ import SectionLabel from "./SectionLabel";
 const AboutSection = () => {
   return (
     <section id="about" className="about wrap section">
-      <SectionLabel number="01">About Me</SectionLabel>
+      <SectionLabel as="h1" number="01">
+        About Me
+      </SectionLabel>
       <div className="about-introduction">
         <ProfilePhoto />
         <div className="about-body">

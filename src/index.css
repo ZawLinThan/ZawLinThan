@@ -1,21 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 :root {
-  font-family: "DM Sans", sans-serif;
-  color: #e8edf7;
-  background: #090d16;
+  font-family: "DM Sans", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--background);
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --accent: #a5a1ff;
-  --accent-solid: #5545cf;
-  --cyan: #6de0e4;
-  --mono: "JetBrains Mono", ui-monospace, monospace;
-  --background: #090d16;
   color-scheme: dark;
-  --muted: #a5b0c5;
-  --border: #2a3449;
-  --surface: #111927;
-  --ink: #e8edf7;
+  --ink: #f6f2eb;
+  --muted: #b8b4bd;
+  --border: #36333e;
+  --control-border: #81798a;
+  --surface: #1a1920;
+  --surface-soft: #22202a;
+  --background: #131219;
+  --accent: #ffbd7d;
+  --accent-solid: #ffbd7d;
+  --accent-hover: #ffd5aa;
+  --on-accent: #21160e;
+  --cyan: #b5afff;
+  --panel: #1a1920;
+  --panel-line: #3e3947;
+  --panel-text: var(--ink);
+  --panel-muted: var(--muted);
+  --panel-accent: var(--accent);
+  --success: #a2dbc0;
+  --success-surface: #23392f;
+  --accent-surface: #38281e;
+  --grid-line: #282530;
+  --violet-surface: #242137;
+  --logo-backplate: #a29bab;
+  --shadow: #07060a66;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --display: "Space Grotesk", "DM Sans", Arial, sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -39,8 +55,8 @@ summary:focus-visible {
   outline-offset: 5px;
 }
 ::selection {
-  background: #244bdc;
-  color: white;
+  background: var(--accent);
+  color: var(--on-accent);
 }
 h1,
 h2,
@@ -51,7 +67,7 @@ p {
 h1,
 h2,
 h3 {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--display);
   font-weight: 600;
 }
 h1 {
@@ -70,8 +86,8 @@ h3 {
 }
 p,
 li {
-  font-size: 1.125rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 a {
   transition:
@@ -82,6 +98,11 @@ a {
 }
 a:hover {
   color: var(--accent);
+}
+a,
+button:not(:disabled),
+summary {
+  cursor: pointer;
 }
 button {
   font: inherit;

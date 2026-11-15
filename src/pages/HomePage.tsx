@@ -11,16 +11,17 @@ const HomePage = () => {
         description="AI and full-stack projects by Zaw Lin Than. Seeking internships and co-ops."
       />
       <Hero />
-      <section className="wrap section">
+      <section className="wrap section home-projects">
         <div className="section-heading">
           <div>
-            <h2>Latest Projects</h2>
+            <p className="eyebrow">02 / PROJECT INDEX</p>
+            <h2>Latest projects</h2>
           </div>
           <Link className="text-link" to="/projects">
             All projects ↗
           </Link>
         </div>
-        <ProjectGrid projects={projects.slice(0, 2)} />
+        <ProjectGrid projects={projects.slice(0, 2)} headingLevel="h3" />
       </section>
     </>
   );

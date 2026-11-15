@@ -8,9 +8,14 @@ const ProjectsPage = () => {
     <div className="wrap page">
       <PageMeta
         title="Projects"
-        description="Explore seven projects in AI, full-stack development, and algorithms."
+        description="Explore projects in AI, full-stack development, and algorithms."
       />
-      <SectionHeading label="PROJECTS/" title="Things I’ve built." />
+      <SectionHeading label="PROJECT INDEX" title="Things I’ve built.">
+        <p>
+          {projects.length} projects across AI, full-stack development, and
+          algorithms.
+        </p>
+      </SectionHeading>
       <ProjectGrid projects={projects} />
     </div>
   );

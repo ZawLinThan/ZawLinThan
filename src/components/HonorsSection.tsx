@@ -1,12 +1,12 @@
 import SectionLabel from "./SectionLabel";
 
 const HonorsSection = () => (
-  <section id="experience" className="experience wrap section">
+  <section id="honors" className="experience wrap section">
     <SectionLabel number="06"> Honors & Awards </SectionLabel>
     <div className="honors">
       <ul>
         <li>
-          4th place among ~60 teams & received Honorable Mention {" "}
+          4th place among ~60 teams & received Honorable Mention{" "}
           <span> HackATL · October 2026</span>
         </li>
         <li>
