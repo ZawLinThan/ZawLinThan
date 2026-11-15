@@ -37,6 +37,35 @@ main:focus {
 .site-header {
   min-height: 76px;
 }
+.header-identity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px;
+  padding-inline: 10px;
+  border: 1px solid var(--control-border);
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--muted);
+  font: 500 0.8rem/1.2 var(--mono);
+}
+.theme-toggle svg {
+  width: 16px;
+  height: 16px;
+}
+.theme-toggle:hover,
+.theme-toggle[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--accent-surface);
+  color: var(--accent);
+}
 
 .wordmark {
   display: inline-flex;
@@ -822,9 +851,6 @@ h1.section-label {
     align-items: stretch;
     gap: 8px;
     padding-block: 12px;
-  }
-  .site-header .wordmark {
-    align-self: start;
   }
   .site-header nav {
     display: grid;

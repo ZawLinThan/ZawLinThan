@@ -6,3 +6,5 @@ Help visitors understand Zaw’s engineering focus, browse his projects, and fin
 - **Type:** Space Grotesk for headings, DM Sans for prose, and JetBrains Mono for compact metadata, navigation, and project diagrams.
 - **Surfaces:** Use visible borders, modest radii, and generous section spacing. Reserve grids and dot patterns for the hero and workflow diagrams. Project screenshots should show the real interface.
 - **Interaction:** Keep links and buttons semantic, give controls visible keyboard focus, and honor reduced motion. Keep the navigation in the same order and allow controls, badges, and diagrams to reflow at narrow widths.
+
+Dark is the default. The header’s Cream toggle applies a warm cream background (`#f6eee1`), pale ivory surfaces (`#fffaf1`), and deep copper accents (`#88421e`). Store the visitor’s choice and restore it before rendering the page.

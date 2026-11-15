@@ -33,6 +33,30 @@
   --mono: "JetBrains Mono", ui-monospace, monospace;
   --display: "Space Grotesk", "DM Sans", Arial, sans-serif;
 }
+:root[data-cream] {
+  color-scheme: light;
+  --ink: #29212b;
+  --muted: #605362;
+  --border: #d7c9bc;
+  --control-border: #88756f;
+  --surface: #fffaf1;
+  --surface-soft: #ede3d7;
+  --background: #f6eee1;
+  --accent: #88421e;
+  --accent-solid: #88421e;
+  --accent-hover: #6e3015;
+  --on-accent: #fff7ea;
+  --cyan: #574384;
+  --panel: var(--surface);
+  --panel-line: var(--border);
+  --success: #276047;
+  --success-surface: #e0eee4;
+  --accent-surface: #f1dec9;
+  --grid-line: #e7dbce;
+  --violet-surface: #ede5f3;
+  --logo-backplate: #e4d7d1;
+  --shadow: #43291e26;
+}
 * {
   box-sizing: border-box;
 }
