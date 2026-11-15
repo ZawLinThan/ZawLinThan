@@ -1,16 +1,13 @@
-import SectionLabel from "./SectionLabel";
 import Arrow from "./Arrow";
 import ResumeViewer from "./ResumeViewer";
 
 const ContactSection = () => {
   return (
     <section id="opportunities" className="opportunities wrap">
-      <SectionLabel number="06">Contact Me</SectionLabel>
+      <p className="eyebrow contact-kicker">CONTACT</p>
       <div className="opportunities-content">
         <div>
-          <div className="availability">
-            <i /> SEEKING INTERNSHIPS & CO-OPS
-          </div>
+          <div className="availability">Open to internships &amp; co-ops</div>
           <h1>
             Let's work together<span className="accent">.</span>
           </h1>
@@ -42,9 +39,7 @@ const ContactSection = () => {
         >
           LinkedIn <Arrow />
         </a>
-        <ResumeViewer>
-          View résumé ↗
-        </ResumeViewer>
+        <ResumeViewer>View résumé ↗</ResumeViewer>
       </div>
     </section>
   );

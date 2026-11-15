@@ -1,72 +1,78 @@
-import HomeActions from "./HomeActions";
 import { Link } from "react-router-dom";
-const Hero = () => {
-  return (
-    <section className="hero wrap">
-      <div>
-        <p className="terminal-command">
-          <span aria-hidden="true">❯</span> whoami
+import HomeActions from "./HomeActions";
+import ActionIcon from "./ActionIcon";
+import portrait from "../assets/zaw-lin-than-thumbnail.jpg";
+
+const Hero = () => (
+  <div className="hero-shell">
+    <section className="hero wrap" aria-labelledby="hero-title">
+      <div className="hero-copy">
+        <p className="eyebrow hero-kicker">
+          <span aria-hidden="true">01 /</span> SOFTWARE ENGINEERING
         </p>
-        <h1>
-          Hi, I’m
-          <br />
+        <h1 id="hero-title">
           Zaw Lin Than<span className="accent">.</span>
         </h1>
         <p className="hero-lead">
-          Building intelligent tools.
-          <br />
-          Connecting ideas to reality.
-        </p>{" "}
-        {/* Need to think if to remove or not */}
-        <p className="hero-description">
           I build AI tools and full-stack applications.
-        </p>{" "}
-        {/* Add some info to this sentence*/}
+        </p>
+        <p className="hero-description">
+          I study computer science at <Link to="/about">Georgia Tech</Link>,
+          where I focus on AI and Information Internetworks.
+        </p>
         <HomeActions />
       </div>
-      <aside className="profile-panel">
+      <aside className="profile-panel" aria-label="Developer profile">
         <div className="panel-titlebar">
-          <span className="panel-dots" aria-hidden="true">
-            <i />
-            <i />
-            <i />
+          <span>
+            <b aria-hidden="true">{"{ }"}</b> profile.json
           </span>
-          <span>developer.ts</span>
-          <span aria-hidden="true">{"{ }"}</span>
+          <span>ATL / GA</span>
         </div>
-        <span className="availability">● Open to internships & co-ops</span>
-        <dl>
-          <div>
-            <dt>Education</dt>
-            <dd>Georgia Institute of Technology</dd>
+        <div className="profile-body">
+          <div className="profile-identity">
+            <img
+              className="profile-chip"
+              src={portrait}
+              width={78}
+              height={78}
+              alt="Portrait of Zaw Lin Than"
+            />
+            <div>
+              <p>
+                Georgia Tech
+              </p>
+              <span>Computer Science · Junior</span>
+            </div>
           </div>
-          <div>
-            <dt> Major</dt>
-            <dd> Computer Science - 4.00 GPA</dd>
-          </div>
-          <div>
-            <dt> Concentration</dt>
-            <dd> AI & Information Internetwork</dd>
-          </div>
-          <div>
-            <dt> Student Status</dt>
-            <dd> Junior </dd>
-          </div>
-          <div>
-            <dt>Graduation</dt>
-            <dd>Expected May 2028</dd>
-          </div>
-          <div>
-            <dt>Based in</dt>
-            <dd>Atlanta, Georgia</dd>
-          </div>
-        </dl>
-        <Link to="/about" className="text-link">
-          More about me ↗
-        </Link>
+          <dl className="profile-specs">
+            <div>
+              <dt>Concentration</dt>
+              <dd>AI &amp; Information Internetworks</dd>
+            </div>
+            <div>
+              <dt>GPA</dt>
+              <dd>4.00</dd>
+            </div>
+            <div>
+              <dt>Graduation</dt>
+              <dd>Expected May 2028</dd>
+            </div>
+            <div>
+              <dt>Based in</dt>
+              <dd>Atlanta, Georgia</dd>
+            </div>
+          </dl>
+        </div>
+        <div className="profile-footer">
+          <span className="availability">Open to internships &amp; co-ops</span>
+          <Link to="/about" className="text-link" aria-label="More about me">
+            About me <ActionIcon name="arrow" />
+          </Link>
+        </div>
       </aside>
     </section>
-  );
-};
+  </div>
+);
 
 export default Hero;
