@@ -1,72 +1,65 @@
-import HomeActions from "./HomeActions";
 import { Link } from "react-router-dom";
-const Hero = () => {
-  return (
-    <section className="hero wrap">
-      <div>
-        <p className="terminal-command">
-          <span aria-hidden="true">❯</span> whoami
-        </p>
-        <h1>
-          Hi, I’m
-          <br />
-          Zaw Lin Than<span className="accent">.</span>
-        </h1>
-        <p className="hero-lead">
-          Building intelligent tools.
-          <br />
-          Connecting ideas to reality.
-        </p>{" "}
-        {/* Need to think if to remove or not */}
-        <p className="hero-description">
-          I build AI tools and full-stack applications.
-        </p>{" "}
-        {/* Add some info to this sentence*/}
-        <HomeActions />
+import HomeActions from "./HomeActions";
+import portrait from "../assets/zaw-lin-than.jpg";
+
+const Hero = () => (
+  <section className="hero wrap">
+    <div className="hero-copy">
+      <p className="hero-kicker">
+        <span aria-hidden="true">01 /</span> Engineering portfolio
+      </p>
+      <h1>
+        Zaw Lin Than<span className="accent">.</span>
+      </h1>
+      <p className="hero-lead">
+        I build AI tools and
+        <br className="hero-break" /> full-stack applications.
+      </p>
+      <p className="hero-description">
+        Computer science at Georgia Tech. I’m interested in how intelligent
+        systems learn and how connected software works in practice.
+      </p>
+      <HomeActions />
+    </div>
+    <aside className="profile-panel" aria-labelledby="profile-title">
+      <div className="panel-titlebar">
+        <h2 id="profile-title">
+          <span aria-hidden="true">[+]</span> Engineer profile
+        </h2>
+        <span aria-hidden="true">FIG. 01</span>
       </div>
-      <aside className="profile-panel">
-        <div className="panel-titlebar">
-          <span className="panel-dots" aria-hidden="true">
-            <i />
-            <i />
-            <i />
-          </span>
-          <span>developer.ts</span>
-          <span aria-hidden="true">{"{ }"}</span>
+      <div className="profile-identity">
+        <img src={portrait} alt="" width="64" height="64" />
+        <div>
+          <p className="profile-school">Georgia Tech</p>
+          <p>Atlanta, Georgia</p>
         </div>
-        <span className="availability">● Open to internships & co-ops</span>
-        <dl>
-          <div>
-            <dt>Education</dt>
-            <dd>Georgia Institute of Technology</dd>
-          </div>
-          <div>
-            <dt> Major</dt>
-            <dd> Computer Science - 4.00 GPA</dd>
-          </div>
-          <div>
-            <dt> Concentration</dt>
-            <dd> AI & Information Internetwork</dd>
-          </div>
-          <div>
-            <dt> Student Status</dt>
-            <dd> Junior </dd>
-          </div>
-          <div>
-            <dt>Graduation</dt>
-            <dd>Expected May 2028</dd>
-          </div>
-          <div>
-            <dt>Based in</dt>
-            <dd>Atlanta, Georgia</dd>
-          </div>
-        </dl>
+      </div>
+      <dl>
+        <div>
+          <dt>Major</dt>
+          <dd>Computer Science · 4.00 GPA</dd>
+        </div>
+        <div>
+          <dt>Threads</dt>
+          <dd>AI & Information Internetworks</dd>
+        </div>
+        <div>
+          <dt>Class</dt>
+          <dd>Junior · Expected May 2028</dd>
+        </div>
+      </dl>
+      <div className="profile-bottom">
+        <span className="availability">
+          <span aria-hidden="true" />
+          Open to internships & co-ops
+        </span>
         <Link to="/about" className="text-link">
-          More about me ↗
+          About me <span aria-hidden="true">↗</span>
         </Link>
-      </aside>
-    </section>
-  );
-};
+      </div>
+    </aside>
+  </section>
+);
 
 export default Hero;

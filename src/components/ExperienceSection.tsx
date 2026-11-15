@@ -4,7 +4,7 @@ import SectionLabel from "./SectionLabel";
 
 const ExperienceSection = () => (
   <section id="experience" className="experience wrap section">
-    <SectionLabel number="05">Experience</SectionLabel>
+    <SectionLabel number="05">Work experience</SectionLabel>
     <div className="timeline">
       {experience.map((item) => (
         <TimelineItem key={item.title} {...item} />

@@ -1,21 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 :root {
   font-family: "DM Sans", sans-serif;
-  color: #e8edf7;
-  background: #090d16;
+  color: var(--ink);
+  background: var(--background);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --accent: #a5a1ff;
-  --accent-solid: #5545cf;
-  --cyan: #6de0e4;
+  --background: #f7f7ef;
+  --surface: #fefef9;
+  --surface-muted: #eef0e6;
+  --ink: #181e18;
+  --muted: #505b50;
+  --border: #cbd1c2;
+  --accent: #365e1f;
+  --accent-solid: #294b1c;
+  --accent-hover: #386225;
+  --signal: #d6f873;
+  --panel: #20291e;
+  --panel-ink: #f1f6eb;
+  --panel-muted: #bfcbb8;
+  --panel-line: #465442;
+  --progress-bg: #edf1d7;
+  --progress-ink: #45531c;
+  --success-bg: #e5efe0;
+  --success-ink: #2f5425;
   --mono: "JetBrains Mono", ui-monospace, monospace;
-  --background: #090d16;
-  color-scheme: dark;
-  --muted: #a5b0c5;
-  --border: #2a3449;
-  --surface: #111927;
-  --ink: #e8edf7;
+  color-scheme: light;
 }
 * {
   box-sizing: border-box;
@@ -39,8 +49,8 @@ summary:focus-visible {
   outline-offset: 5px;
 }
 ::selection {
-  background: #244bdc;
-  color: white;
+  background: var(--signal);
+  color: var(--ink);
 }
 h1,
 h2,

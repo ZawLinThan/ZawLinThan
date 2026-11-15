@@ -1,1 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#171a24"/><text x="10" y="44" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#8ba9ff">z.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#20291e"/>
+  <path d="M17 20h24L17 44h24m5 0h5" fill="none" stroke="#d6f873" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+</svg>

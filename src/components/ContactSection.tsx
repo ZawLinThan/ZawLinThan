@@ -5,7 +5,9 @@ import ResumeViewer from "./ResumeViewer";
 const ContactSection = () => {
   return (
     <section id="opportunities" className="opportunities wrap">
-      <SectionLabel number="06">Contact Me</SectionLabel>
+      <SectionLabel number="06" as="p">
+        Contact Me
+      </SectionLabel>
       <div className="opportunities-content">
         <div>
           <div className="availability">
@@ -42,9 +44,7 @@ const ContactSection = () => {
         >
           LinkedIn <Arrow />
         </a>
-        <ResumeViewer>
-          View résumé ↗
-        </ResumeViewer>
+        <ResumeViewer>View résumé ↗</ResumeViewer>
       </div>
     </section>
   );

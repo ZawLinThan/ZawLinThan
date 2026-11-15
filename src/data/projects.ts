@@ -26,6 +26,7 @@ export interface Project {
   highlights: string[];
   stack: string[];
   screenshots: { src: string; alt: string; caption?: string }[];
+  pipeline?: readonly [string, string, string];
   video?: { embedUrl: string; url: string; title: string };
   websiteUrl: string | null;
 }
@@ -35,6 +36,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "rag-study-assistant",
+    pipeline: ["Course files", "Retrieval", "Study tools"],
     title: "RAG Study Assistant",
     category: "AI / Team project",
     date: "In progress",
@@ -64,6 +66,7 @@ export const projects: Project[] = [
   },
   {
     slug: "ai-research-agent",
+    pipeline: ["Question", "Web search", "Cited report"],
     title: "AI Research Agent",
     category: "AI / Automation",
     date: "In progress",

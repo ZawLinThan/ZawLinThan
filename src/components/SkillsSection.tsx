@@ -6,7 +6,9 @@ import SectionLabel from "./SectionLabel";
 const SkillsSection = () => {
   return (
     <section id="skills" className="skills wrap section">
-      <SectionLabel number="03">Toolkit</SectionLabel>
+      <SectionLabel number="03" as="h1">
+        Toolkit
+      </SectionLabel>
       <SkillMarquee skills={skillGroups.flatMap((group) => group.skills)} />
       <div className="skill-categories">
         {skillGroups.map((group) => (

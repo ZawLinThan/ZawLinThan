@@ -7,12 +7,10 @@ const HomeActions = () => {
     <div className="home-actions">
       <div className="home-actions-primary">
         <Link className="home-action home-action-projects" to="/projects">
-          <span>Explore my projects</span>
+          <span>Explore projects</span>
           <ActionIcon name="arrow" />
         </Link>
-        <ResumeViewer
-          className="home-action home-action-resume"
-        >
+        <ResumeViewer className="home-action home-action-resume">
           <span>View résumé</span>
           <ActionIcon name="arrow" />
         </ResumeViewer>
@@ -25,7 +23,7 @@ const HomeActions = () => {
           rel="noopener noreferrer"
         >
           <ActionIcon name="linkedin" />
-          <span>My LinkedIn</span>
+          <span>LinkedIn</span>
           <ActionIcon name="arrow" />
         </a>
         <a
@@ -35,7 +33,7 @@ const HomeActions = () => {
           rel="noopener noreferrer"
         >
           <ActionIcon name="github" />
-          <span>My GitHub</span>
+          <span>GitHub</span>
           <ActionIcon name="arrow" />
         </a>
       </div>
