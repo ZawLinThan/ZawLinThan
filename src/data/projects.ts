@@ -46,8 +46,8 @@ export interface Project {
 // Files in public can instead use a root-relative URL such as /screenshots/example.png.
 export const projects: Project[] = [
   {
-    slug: "ai-research-agent",
-    title: "AI Research Agent",
+    slug: "fieldwork",
+    title: "FieldWork - AI Research Agent",
     category: "AI / Automation",
     date: "In progress",
     status: "In progress",

@@ -488,7 +488,7 @@ h1.section-label {
   );
   background-size: 16px 16px;
 }
-.project-preview.ai-research-agent {
+.project-preview.fieldwork {
   --workflow-accent: var(--cyan);
   background-color: var(--violet-surface);
 }

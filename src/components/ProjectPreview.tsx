@@ -1,16 +1,8 @@
 import type { Project } from "../data/projects";
 
 const workflows: Record<string, readonly string[]> = {
-  "rag-study-assistant": [
-    "Course materials",
-    "Retrieve context",
-    "Study tools",
-  ],
-  "ai-research-agent": [
-    "Research question",
-    "Evaluate sources",
-    "Cited report",
-  ],
+  //folio: ["Course materials", "Retrieve context", "Study tools"],
+  fieldwork: ["Research question", "Evaluate sources", "Cited report"],
 };
 
 const stepGlyphs = [
