@@ -15,6 +15,16 @@ import bondMobileView from "../assets/bond/mobile_view.png"
 
 import landingPage from "../assets/xplain-it/landing_page.png"
 
+import folioOverview from "../assets/folio/overviewPage.png";
+import folioSignIn from "../assets/folio/sign_in.jpg";
+import folioSignUp from "../assets/folio/sign_up.png";
+import folioCourses from "../assets/folio/coursesPage.png";
+import folioDocuments from "../assets/folio/documentsPage.png";
+import folioChat from "../assets/folio/chatPage.png";
+import folioTests from "../assets/folio/testsPage.png";
+import folioFlashcards from "../assets/folio/flashcardsPage.png";
+import folioTimer from "../assets/folio/timerPage.png";
+
 import type { ProjectStatus } from "../components/StatusBadge";
 
 export interface Project {
@@ -22,7 +32,7 @@ export interface Project {
   title: string;
   category: string;
   date: string;
-  status: ProjectStatus;
+  status: ProjectStatus
   summary: string;
   description: string;
   highlights: string[];
@@ -35,35 +45,6 @@ export interface Project {
 // Import screenshots from src/assets above and use the imported variable as src.
 // Files in public can instead use a root-relative URL such as /screenshots/example.png.
 export const projects: Project[] = [
-  {
-    slug: "rag-study-assistant",
-    title: "RAG Study Assistant",
-    category: "AI / Team project",
-    date: "In progress",
-    status: "In progress",
-    summary:
-      "A study companion that turns course materials into personalized learning tools.",
-    description:
-      "Collaborating in a 5–6 member team to build a full-stack retrieval-augmented generation study assistant. It generates context-aware explanations, practice tests, and flashcards from user-uploaded course materials. As project manager at GT WebDev, I also lead a team of five on the AI Study Assistant project.",
-    highlights: [
-      "Developing asynchronous document processing and retrieval using Redis.",
-      "Supporting semantic search across course materials.",
-      "Working on personalized weak-point tracking to guide studying.",
-    ],
-    stack: [
-      "TypeScript",
-      "React",
-      "Express",
-      "Supabase",
-      "Redis",
-      "BullMQ",
-      "PostgreSQL",
-      "Cloudflare R2",
-      "Sentry"
-    ],
-    screenshots: [],
-    websiteUrl: null,
-  },
   {
     slug: "ai-research-agent",
     title: "AI Research Agent",
@@ -90,6 +71,46 @@ export const projects: Project[] = [
       "PostgreSQL",
     ],
     screenshots: [],
+    websiteUrl: null,
+  },
+  {
+    slug: "folio",
+    title: "Folio - RAG Study Assistant",
+    category: "AI / Team project",
+    date: "November 2026",
+    status: "Done",
+    summary:
+      "A study companion that turns course materials into personalized learning tools.",
+    description:
+      "Led a 6-member team and built a full-stack retrieval-augmented generation study assistant as a Product Manager. \
+      It generates context-aware explanations, practice tests, and flashcards from user-uploaded course materials.",
+    highlights: [
+      "Developed asynchronous document processing and retrieval pipeline using Redis.",
+      "Support semantic search across course materials.",
+      "Generate context-aware explanations, practice tests, and flashcards.",
+    ],
+    stack: [
+      "TypeScript",
+      "React",
+      "Express",
+      "Supabase",
+      "Redis",
+      "BullMQ",
+      "PostgreSQL",
+      "Cloudflare R2",
+      "Sentry"
+    ],
+    screenshots: [
+      { src: folioSignIn, alt: "Folio sign-in page", caption: "Sign in" },
+      { src: folioSignUp, alt: "Folio sign-up page", caption: "Create an account" },
+      { src: folioOverview, alt: "RAG Study Assistant overview page", caption: "Overview" },
+      { src: folioCourses, alt: "Folio courses workspace", caption: "Courses" },
+      { src: folioDocuments, alt: "Folio documents page", caption: "Documents" },
+      { src: folioChat, alt: "Folio chat page", caption: "Chat" },
+      { src: folioTests, alt: "Folio tests page", caption: "Practice tests" },
+      { src: folioFlashcards, alt: "Folio flashcards page", caption: "Flashcards" },
+      { src: folioTimer, alt: "Folio timer page", caption: "Study timer" },
+    ],
     websiteUrl: null,
   },
   {
