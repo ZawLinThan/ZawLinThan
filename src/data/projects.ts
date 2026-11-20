@@ -111,7 +111,7 @@ export const projects: Project[] = [
       { src: folioFlashcards, alt: "Folio flashcards page", caption: "Flashcards" },
       { src: folioTimer, alt: "Folio timer page", caption: "Study timer" },
     ],
-    websiteUrl: null,
+    websiteUrl: "https://folio-frontend-tau.vercel.app/",
   },
   {
     slug: "xplain-it",
