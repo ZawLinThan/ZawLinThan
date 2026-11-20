@@ -46,11 +46,10 @@ const ProjectGrid = ({
 
   return (
     <div className="project-grid" ref={gridRef}>
-      {projects.map((project, index) => (
+      {projects.map((project) => (
         <ProjectCard
           key={project.slug}
           project={project}
-          index={index}
           headingLevel={headingLevel}
         />
       ))}

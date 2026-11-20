@@ -7,11 +7,9 @@ import Arrow from "./Arrow";
 
 const ProjectCard = ({
   project,
-  index,
   headingLevel,
 }: {
   project: Project;
-  index: number;
   headingLevel: "h2" | "h3";
 }) => {
   const Heading = headingLevel;
