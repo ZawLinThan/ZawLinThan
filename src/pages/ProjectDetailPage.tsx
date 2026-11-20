@@ -6,6 +6,7 @@ import ProjectGallery from "../components/ProjectGallery";
 import SectionHeading from "../components/SectionHeading";
 import PageMeta from "../components/PageMeta";
 import NotFoundPage from "./NotFoundPage";
+import ActionIcon from "../components/ActionIcon";
 
 const ProjectDetailPage = () => {
   const { slug } = useParams();
@@ -48,21 +49,45 @@ const ProjectDetailPage = () => {
             <h2>Technologies & frameworks</h2>
             <TechStack items={project.stack} />
           </div>
-          <div>
-            <h2>Project website</h2>
-            {project.websiteUrl ? (
-              <a
-                className="button"
-                href={project.websiteUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Visit website ↗
-              </a>
-            ) : (
-              <p>A live website link hasn’t been added yet.</p>
-            )}
-          </div>
+          {(project.websiteUrl || project.githubUrl.length > 0) && (
+            <div>
+              <h2>Project links</h2>
+              <div className="project-links">
+                {project.websiteUrl && (
+                  <a
+                    className="button"
+                    href={project.websiteUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Site ↗
+                  </a>
+                )}
+                {project.githubUrl.map((url, index) => {
+                  const label =
+                    project.githubUrl.length === 2
+                      ? index === 0
+                        ? "Frontend"
+                        : "Backend"
+                      : "GitHub";
+
+                  return (
+                    <a
+                      className="button project-github-link"
+                      href={url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${label} GitHub repository`}
+                      key={url}
+                    >
+                      <ActionIcon name="github" />
+                      {project.githubUrl.length === 2 && <span>{label}</span>}
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </aside>
       </div>
       <ProjectGallery screenshots={project.screenshots} video={project.video} />

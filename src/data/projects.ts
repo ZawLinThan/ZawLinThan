@@ -40,6 +40,7 @@ export interface Project {
   screenshots: { src: string; alt: string; caption?: string }[];
   video?: { embedUrl: string; url: string; title: string };
   websiteUrl: string | null;
+  githubUrl: string[];
 }
 
 // Import screenshots from src/assets above and use the imported variable as src.
@@ -72,6 +73,7 @@ export const projects: Project[] = [
     ],
     screenshots: [],
     websiteUrl: null,
+    githubUrl: [],
   },
   {
     slug: "folio",
@@ -112,6 +114,7 @@ export const projects: Project[] = [
       { src: folioTimer, alt: "Folio timer page", caption: "Study timer" },
     ],
     websiteUrl: "https://folio-frontend-tau.vercel.app/",
+    githubUrl: ["https://github.com/ZawLinThan/folio_frontend", "https://github.com/ZawLinThan/folio_backend"],
   },
   {
     slug: "xplain-it",
@@ -144,7 +147,7 @@ export const projects: Project[] = [
       "PyTorch",
     ],
     screenshots: [
-      {src: landingPage, alt: "Xplain-it landing page", caption: "Landing Page"}
+      { src: landingPage, alt: "Xplain-it landing page", caption: "Landing Page" }
     ],
     video: {
       embedUrl:
@@ -153,6 +156,7 @@ export const projects: Project[] = [
       title: "Xplain-it demo video",
     },
     websiteUrl: null,
+    githubUrl: ["https://github.com/ZawLinThan/Xplain-it-HackATL"],
   },
   {
     slug: "bond",
@@ -188,9 +192,10 @@ export const projects: Project[] = [
       { src: bondBondsPage, alt: "Bond connections page", caption: "Bonds" },
       { src: bondNotificationPage, alt: "Bond notifications page", caption: "Notifications" },
       { src: bondProfilePage, alt: "Bond profile page", caption: "Profile" },
-      { src: bondMobileView, alt: "Bond mobile view", caption: "Mobile View"}, 
+      { src: bondMobileView, alt: "Bond mobile view", caption: "Mobile View" },
     ],
     websiteUrl: "https://bond-k7wq.onrender.com",
+    githubUrl: ["https://github.com/ZawLinThan/Bond"],
   },
   {
     slug: "mycloud",
@@ -227,6 +232,7 @@ export const projects: Project[] = [
       { src: myCloudPlan, alt: "myCloud plan purchase page", caption: "Choose a storage plan" },
     ],
     websiteUrl: "https://mycloud-nine.vercel.app/",
+    githubUrl: ["https://github.com/ZawLinThan/myCloud"],
   },
   {
     slug: "salary-prediction-model",
@@ -246,6 +252,7 @@ export const projects: Project[] = [
     stack: ["Python", "Jupyter", "scikit-learn", "pandas", "numpy"],
     screenshots: [],
     websiteUrl: null,
+    githubUrl: [],
   },
   {
     slug: "cryptocurrency-portfolio",
@@ -264,6 +271,7 @@ export const projects: Project[] = [
     stack: ["C", "Singly Linked List", "Data Structures", "Pointers"],
     screenshots: [],
     websiteUrl: null,
+    githubUrl: [],
   },
   {
     slug: "modified-pomodoro-timer",
@@ -289,6 +297,7 @@ export const projects: Project[] = [
     ],
     screenshots: [],
     websiteUrl: null,
+    githubUrl: [],
   },
   {
     slug: "navigation-system",
@@ -307,6 +316,7 @@ export const projects: Project[] = [
     stack: ["C++", "Dijkstra’s algorithm", "A*", "Data Structures", "Pointers"],
     screenshots: [],
     websiteUrl: null,
+    githubUrl: [],
   },
   {
     slug: "six-degrees-of-separation",
@@ -325,6 +335,7 @@ export const projects: Project[] = [
     stack: ["C++", "Breadth-first search", "Graphs", "Hash maps", "Pointers"],
     screenshots: [],
     websiteUrl: null,
+    githubUrl: [],
   },
   {
     slug: "movie-player",
@@ -347,5 +358,6 @@ export const projects: Project[] = [
     ],
     screenshots: [],
     websiteUrl: null,
+    githubUrl: [],
   },
 ];

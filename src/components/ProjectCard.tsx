@@ -22,9 +22,6 @@ const ProjectCard = ({
       aria-label={`View ${project.title} project`}
     >
       <div className="project-filebar">
-        <span className="project-number" aria-hidden="true">
-          {String(index + 1).padStart(2, "0")} /
-        </span>
         <span className="eyebrow">{project.category}</span>
         <StatusBadge status={project.date} />
       </div>

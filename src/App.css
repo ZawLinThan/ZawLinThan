@@ -732,6 +732,12 @@ h1.section-label {
 .project-facts p {
   margin-top: 8px;
 }
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
 .screenshot-gallery {
   display: grid;
   gap: 18px;
