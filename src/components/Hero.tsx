@@ -7,9 +7,6 @@ const Hero = () => (
   <div className="hero-shell">
     <section className="hero wrap" aria-labelledby="hero-title">
       <div className="hero-copy">
-        <p className="eyebrow hero-kicker">
-          <span aria-hidden="true">01 /</span> SOFTWARE ENGINEERING
-        </p>
         <h1 id="hero-title">
           Zaw Lin Than<span className="accent"></span>
         </h1>
@@ -28,7 +25,6 @@ const Hero = () => (
           <span>
             <b aria-hidden="true">{"{ }"}</b> profile.json
           </span>
-          <span>ATL / GA</span>
         </div>
         <div className="profile-body">
           <div className="profile-identity">

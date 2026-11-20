@@ -14,7 +14,6 @@ const HomePage = () => {
       <section className="wrap section home-projects">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">02 / PROJECT INDEX</p>
             <h2>Latest projects</h2>
           </div>
           <Link className="text-link" to="/projects">
