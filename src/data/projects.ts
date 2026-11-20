@@ -82,7 +82,7 @@ export const projects: Project[] = [
     date: "November 2026",
     status: "Done",
     summary:
-      "A study companion that turns course materials into personalized learning tools.",
+      "A centralized study assistant that generates context-aware explanations, practice tests, and flashcards from user-uploaded course materials.",
     description:
       "Led a 6-member team and built a full-stack retrieval-augmented generation study assistant as a Product Manager. \
       It generates context-aware explanations, practice tests, and flashcards from user-uploaded course materials.",
